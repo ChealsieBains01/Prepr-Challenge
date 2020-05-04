@@ -31,7 +31,9 @@ public function list(){
     }
 } 
 ```
-7. Created a google maps API: 8. Used the google maps API to make a map on the homepage (Using code from the google maps website for a dark mode map -- I thought it looked cool) 9. Stored the longitude, latitude, and title of the labs in php variables on the homepage, and the converted these variables to js.:
+7. Created a google maps API. Used the google maps API to make a map on the homepage (Using code from the google maps website for a dark mode map -- I thought it looked cool)
+
+8. Stored the longitude, latitude, and title of the labs in php variables on the homepage, and the converted these variables to js.:
 ```
 $lat[$lab->id-1] = $lab->lat; 
 $long[$lab->id-1] = $lab->long; 
@@ -43,7 +45,7 @@ $title[$lab->id-1] = $lab->title; } ?>
   var lo = <?php echo json_encode($long); ?>;
   var t = <?php echo json_encode($title); ?>;
  ```
-8. Created markers for each longitude and latitude point on the map, and when you hover over you can see the location title
+9. Created markers for each longitude and latitude point on the map, and when you hover over you can see the location title
 Created a form of cities so that the user can search by city for a lab:
 ```
 City: Shanghai Tbilisi Ahmedabad
@@ -57,4 +59,4 @@ City: Shanghai Tbilisi Ahmedabad
     }
   ?>
   ```
-9. Working on: Displaying city information for each lab
+10. Working on: Displaying city information for each lab
